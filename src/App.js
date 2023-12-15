@@ -6,7 +6,9 @@ function App() {
     <div className="App">
       <>
       <Nav_Bar/>
+      <div style={{width:"100%",display:"flex",justifyContent:"center"}}>
       <Container/>
+      </div>
       </>
     </div>
   );

@@ -1,34 +1,42 @@
 import * as React from 'react';
+import { useTheme } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+import { Button } from '@mui/material';
 
-export default function Tender_card({title,description}) {
-  return (
-    <Box margin={1} marginBlockEnd={3}>
-    <Card sx={{ maxWidth: 245 }}  >
-      <CardMedia
-        sx={{ height: 100 }}
-        image="https://th.bing.com/th?id=OSK.HEROtnPRmD6jb6pSt7EYc2u_tuXsPOUN-Z16ra3qKk78PxA&w=296&h=176&c=1&rs=2&o=6&dpr=1.5&pid=SANGAM"
-        title="green iguana"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          {title}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small"  variant="contained" color="secondary">View</Button>
-        <Button size="small"  variant="contained" color="success">Bid</Button>
-      </CardActions>
-    </Card>
-    </Box>
-  );
+export default function Tender_card({ title, description,time }) {
+    const theme = useTheme();
+
+    return (
+        <Card sx={{ display: 'flex', borderRadius: "10px", marginBottom: "20px", justifyContent:"space-between",height:"70px",background:"rgb(221, 225, 229)" }}>
+            <CardMedia
+                component="img"
+                sx={{ width: 150 ,marginLeft:"0" ,borderRadius:"10px"}}
+                image="https://th.bing.com/th?id=ODL.236e670dc5db895549866c86c7d5f172&w=147&h=110&c=10&rs=1&qlt=99&o=6&dpr=1.5&pid=13.1"
+                alt="Live from space album cover"
+            />
+            <Box sx={{width:"60%",height:"100%" }}>
+                <CardContent sx={{ display:"flex" ,flexDirection:"column" ,alignItems:"start",marginTop:"1px"}}>
+                    <Typography component="div" variant="h5"sx={{marginTop:"-10px" }}>
+                        {title}
+                    </Typography>
+                    <Typography variant="h6" color="text.secondary" component="div">
+                        {description}
+                    </Typography>
+                    
+                </CardContent>
+            </Box>
+            <Box sx={{ display: 'flex',justifyContent:"space-between",marginRight:"8px",alignItems:"center",width:"24%" }}>
+            <Typography variant="subtitle2" color="text.secondary" component="div">
+                        {time}
+                    </Typography>
+                <Button variant="outlined" color="secondary" sx={{ background:"white"}}>View</Button>
+                <Button variant="contained" color="success">Bid</Button>
+            </Box>
+
+        </Card>
+    );
 }

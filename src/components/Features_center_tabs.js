@@ -8,7 +8,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Tender_card from './Tender_card';
-import './Features_center_tabs.css'
+
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -56,7 +56,7 @@ export default function Features_center_tabs() {
   };
 
   return (
-    <Box sx={{ bgcolor: 'background.paper', width: 600 }} >
+    <Box sx={{ bgcolor: 'background.paper',width:"100%" }} >
       <AppBar position="static" centered >
         <Tabs
           value={value}
@@ -78,18 +78,13 @@ export default function Features_center_tabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction} >
-         OPEN TENDER
-         WILL ADD CARDS HERE
-         <div className="cards_container">
-         <Tender_card title="hydro plant1" description="dfghjkjhgfdfghj"/>
-         <Tender_card title="hydro plant2" description="hjhgfhgfdfghj"/>
-         <Tender_card title="hydro plant3" description="fdfghj"/>
-         <Tender_card title="hydro plant1" description="dfghjkjhgfdfghj"/>
-         <Tender_card title="hydro plant2" description="hjhgfhgfdfghj"/>
-         <Tender_card title="hydro plant3" description="fdfghj"/>
-         </div>
-         
+        <TabPanel value={value} index={0} dir={theme.direction}  >
+         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm"/>
+         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm"/>
+         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm"/>
+         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm"/>
+         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm"/>
+         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm"/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           APPLIED TENDER

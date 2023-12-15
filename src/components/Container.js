@@ -17,27 +17,15 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Container() {
   return (
-    <Box sx={{ flexGrow: 1 }} margin={1}>
-      <Grid container spacing={3}>
-        <Grid xs>
-          <Item>
-            Profile
-             <Profile_left/>
-          </Item>
-        </Grid>
-        <Grid xs={6}>
-          <Item>
-            FEATURES
+    <Box sx={{ width:"90%" ,backgroundColor:"red",marginTop:"13px"}} margin={1}>
+      
+        <Grid >
+          <Item >
             <Features_center/>
           </Item>
         </Grid>
-        <Grid xs>
-          <Item>
-            ANALYTICS 
-            <Analytics_right/>
-          </Item>
-        </Grid>
-      </Grid>
+        
+      
     </Box>
   );
 }
