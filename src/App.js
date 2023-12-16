@@ -1,7 +1,8 @@
 import './App.css';
 import Nav_Bar from './components/Nav_bar';
 import Container from './components/Container';
-import Profile from './profile_components/profile';
+import Profile from './profile_components/Profile';
+
 
 function App() {
   return (
