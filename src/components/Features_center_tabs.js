@@ -79,12 +79,12 @@ export default function Features_center_tabs() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}  >
-         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm"/>
-         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm"/>
-         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm"/>
-         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm"/>
-         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm"/>
-         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm"/>
+         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm" category="Goods"/>
+         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm" category="Services"/>
+         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm" category="Goods"/>
+         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm" category="Services"/>
+         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm" category="Services"/>
+         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm" category="Goods"/>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           APPLIED TENDER

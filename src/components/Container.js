@@ -3,8 +3,6 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
-import Profile_left from './Profile_left';
-import Analytics_right from './Analytics_right';
 import Features_center from './Features_center';
 
 const Item = styled(Paper)(({ theme }) => ({

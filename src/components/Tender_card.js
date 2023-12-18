@@ -6,8 +6,9 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button } from '@mui/material';
+import Chip from '@mui/material/Chip';
 
-export default function Tender_card({ title, description,time }) {
+export default function Tender_card({ title, description,time,category }) {
     const theme = useTheme();
 
     return (
@@ -33,6 +34,7 @@ export default function Tender_card({ title, description,time }) {
             <Typography variant="subtitle2" color="text.secondary" component="div">
                         {time}
                     </Typography>
+                    <Chip label={category} color="primary" />
                 <Button variant="outlined" color="secondary" sx={{ background:"white"}}>View</Button>
                 <Button variant="contained" color="success">Bid</Button>
             </Box>
