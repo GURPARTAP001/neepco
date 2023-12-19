@@ -5,12 +5,11 @@ import { Box } from '@mui/material';
 import My_profile_right from './My_profile_right';
 
 
-//name ,email,phone no.,kind of vender
-// material ui components:list,divider
 function Profile() {
+  
   return (
     <div>
-       <Nav_Bar/>
+       {/* <Nav_Bar/> */}
        <div style={{display:"flex",width:"95%",marginInline:"auto",justifyContent:"center",alignItems:"center",height:"90vh",marginTop:"10px"}}>
        <My_account_left/>
        <My_profile_right/>

@@ -20,6 +20,7 @@ export default function Navbar() {
   };
 
   const menuOptions = [
+    { text: 'Vender Profile', onClick: () => {navigate('/Vender_profile')} },
     { text: 'Pending Payments', onClick: () => {navigate('/Pending_payments')} },
     { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
     // ... other options

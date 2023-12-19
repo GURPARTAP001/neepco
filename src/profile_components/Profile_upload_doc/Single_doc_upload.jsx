@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
-import { Button, Paper, Typography } from '@mui/material';
+import { Paper, Typography, TextField } from '@mui/material';
 
 const Single_doc_upload = ({ label }) => {
-    const [file, setFile] = useState(null);
+    const [inputValue, setInputValue] = useState('');
 
-    const handleFileChange = (event) => {
-        setFile(event.target.files[0]);
+    const handleInputChange = (event) => {
+        setInputValue(event.target.value);
     };
+
+   
+    
 
     return (
         <Paper style={{ padding: '20px', margin: '10px 0' }}>
             <Typography variant="h6">{label}</Typography>
-            <input type="file" onChange={handleFileChange} />
-            {file && <Typography variant="body1">{file.name}</Typography>}
+            <TextField id='Single_doc_upload'
+              label="Input" 
+              variant="outlined" 
+              fullWidth 
+              onChange={handleInputChange} 
+              value={inputValue}
+              style={{ marginTop: '10px' }}
+            />
+            {inputValue && <Typography variant="body1">Entered: {inputValue}</Typography>}
         </Paper>
     );
 };

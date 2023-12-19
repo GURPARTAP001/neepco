@@ -10,7 +10,9 @@ const Doc_upload = () => {
     const [activeStep, setActiveStep] = useState(0);
 
     const handleNext = () => {
+        
         setActiveStep((prevActiveStep) => prevActiveStep + 1);
+        
     };
 
     const handleBack = () => {
