@@ -11,32 +11,37 @@ import Login from './components/Login';
 import Admin_payments_page from './Admin_components/Admin_payments_page';
 import Pending_payments from './Admin_components/Pending_payments';
 import SignIn from './components/SignIn';
+import Admin_nav from './Admin_components/Admin_nav';
+import Admin_upload_tender from './Admin_components/Admin_upload_tender';
+import Admin_tender_view_btn from './Admin_components/Admin_tender_view_btn';
 
 
 function App() {
   return (
     <div className="App">
+      
+      <SignIn/>
        
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
 
-       <Router>
-       <Nav_Bar/>
+      {/* <Router> */}
+        {/* <Login/> */}
+      {/* <Nav_Bar/> */}
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
       <Routes>
         {/* <Route path="/" element={<Container/> } /> */}
-        <Route path="/" element={<Login/>} />
-        <Route path="/Admin_dashboard" element={<Admin_dashboard/> } />
+        {/* <Route path="/Admin_dashboard" element={<Admin_dashboard/> } /> */}
         
         
         {/* <Route path="/proposal-form" element={ <Send_proposal_page/>} /> */}
-        <Route path="Pending_payments" element={ <Pending_payments/>} />
-        <Route path="/Admin_payments_page" element={ <Admin_payments_page/>} />
+        {/* <Route path="Pending_payments" element={ <Pending_payments/>} /> */}
+        {/* <Route path="/Admin_payments_page" element={ <Admin_payments_page/>} /> */}
         {/* <Route path="/Vender_profile" element={ <Profile/>} /> */}
          {/* Add other routes as needed */}
-       </Routes>
-    </Router>
+       {/* </Routes>  */}
+    {/* </Router>  */}
       
     </div>
   );
