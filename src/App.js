@@ -16,29 +16,27 @@ import SignIn from './components/SignIn';
 function App() {
   return (
     <div className="App">
-      
-      <SignIn/>
        
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
 
-      {/* <Router> */}
-        {/* <Login/> */}
-      {/* <Nav_Bar/> */}
+       <Router>
+       <Nav_Bar/>
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
-      {/* <Routes> */}
+      <Routes>
         {/* <Route path="/" element={<Container/> } /> */}
-        {/* <Route path="/Admin_dashboard" element={<Admin_dashboard/> } /> */}
+        <Route path="/" element={<Login/>} />
+        <Route path="/Admin_dashboard" element={<Admin_dashboard/> } />
         
         
         {/* <Route path="/proposal-form" element={ <Send_proposal_page/>} /> */}
-        {/* <Route path="Pending_payments" element={ <Pending_payments/>} /> */}
-        {/* <Route path="/Admin_payments_page" element={ <Admin_payments_page/>} /> */}
+        <Route path="Pending_payments" element={ <Pending_payments/>} />
+        <Route path="/Admin_payments_page" element={ <Admin_payments_page/>} />
         {/* <Route path="/Vender_profile" element={ <Profile/>} /> */}
          {/* Add other routes as needed */}
-       {/* </Routes>  */}
-    {/* </Router>  */}
+       </Routes>
+    </Router>
       
     </div>
   );

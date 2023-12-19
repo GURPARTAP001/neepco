@@ -1,28 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "@mui/material/Container";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import Nav_Bar from "./Nav_bar";
 import axios from "axios";
 import {useNavigate} from "react-router-dom";
+import { ChatState } from "../ChatProvider";
 
 function LoginPage() {
     const navigate = useNavigate();
-  const [value, setValue] = useState("admin");
+    const [value, setValue] = useState("admin");
+    const { user, setUser } = ChatState();
  /* const [loginDetails, setLoginDetails] = useState({
     username: "",
     password: "",
   });*/
 
-  const handleTabChange = (event, newValue) => {
+  const handleTabChange = (newValue) => {
     setValue(newValue);
   };
+
+  console.log(value);
 
   /*const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -46,7 +48,11 @@ function LoginPage() {
       const config = {headers:{"Content-type": "application/json",},};
       const { data } = await axios.post("http://localhost:4000/api/user/login",{email,password},config);
       console.log(JSON.stringify(data));
-      navigate("/Admin_dashboard")
+      localStorage.setItem("userInfo",JSON.stringify(data));
+
+       const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+       setUser(userInfo);
+      navigate("/Admin_dashboard");
     } catch (e) {
       console.log(e);
     }
@@ -71,16 +77,31 @@ function LoginPage() {
 
         {/* Tabs for Admin and Vendor */}
         <Box sx={{ width: "100%" }}>
-          <Tabs
+          {/*<Tabs
             value={value}
             onChange={handleTabChange}
             textColor="primary"
             indicatorColor="secondary"
             aria-label="secondary tabs example"
           >
-            <Tab value="admin" label="Admin" />
+            <Tab value="admin" label="Admin"  />
             <Tab value="vendor" label="Vendor" />
-          </Tabs>
+      </Tabs>*/}
+      <div style={{ display: "flex", justifyContent: "center" }}>
+            <Button
+              variant={value === "admin" ? "contained" : "outlined"}
+              onClick={() => handleTabChange("admin")}
+              style={{ marginRight: "16px" }}
+            >
+              Admin
+            </Button>
+            <Button
+              variant={value === "vendor" ? "contained" : "outlined"}
+              onClick={() => handleTabChange("vendor")}
+            >
+              Vendor
+            </Button>
+          </div>
         </Box>
 
         <Grid container spacing={3}>

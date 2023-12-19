@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { TextField, Button, Grid, Paper, Typography, Card, CardContent } from '@mui/material';
 import Container from '../components/Container';
+import axios from "axios";
+import {useNavigate} from "react-router-dom";
+import { ChatState } from "../ChatProvider";
 
 const Admin_payments_page = () => {
+  const navigate = useNavigate();
   const [paymentDetails, setPaymentDetails] = useState({
     cardNumber: '',
     expiryDate: '',
@@ -10,14 +14,43 @@ const Admin_payments_page = () => {
     amount: '',
   });
 
+  var admin_amount = paymentDetails.amount;
+
+  const { user } = ChatState();
+
+  const userId = JSON.parse(localStorage.getItem("userInfo"))._id;
+
+  console.log(userId);
+
+  console.log(user);
+
+  console.log(user.token);
+
+
+
   const handleChange = (event) => {
     setPaymentDetails({ ...paymentDetails, [event.target.name]: event.target.value });
+    admin_amount = paymentDetails.amount
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async(event) => {
     event.preventDefault();
-    // Payment processing logic goes here
+    /*try {
+      const config = {
+        headers:
+        {
+          "Content-type": "application/json",
+           Authorization: `Bearer ${user.token}`,
+        }
+         };
+      const { data } = await axios.post("http://localhost:4000/api/payment",{admin_amount},config);
+      console.log(JSON.stringify(data));
+      
+    } catch (e) {
+      console.log(e);
+    }*/
     console.log(paymentDetails);
+    navigate("/Admin_dashboard");
   };
 
   return (
