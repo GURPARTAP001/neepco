@@ -121,6 +121,11 @@ function LoginPage() {
                 >
                   Sign In
                 </Button>
+                <Typography variant="body2" sx={{ mt: 2, textAlign: 'center', cursor: 'pointer', color: 'primary.main' }}
+    onClick={() => navigate('/SignUp')} // Replace with your route
+  >
+    Already have an account? Click here
+  </Typography>
               </Box>
             </Paper>
           </Grid>
