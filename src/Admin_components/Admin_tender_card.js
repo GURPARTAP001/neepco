@@ -1,60 +1,82 @@
-import * as React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button } from '@mui/material';
-import Chip from '@mui/material/Chip';
-import { useNavigate } from 'react-router-dom';
+import { Card, CardContent, CardMedia, Typography, Button, Chip, Box } from '@mui/material';
+import { styled } from '@mui/material/styles';
 import Admin_tender_view_btn from './Admin_tender_view_btn';
 
+const StyledCard = styled(Card)({
+  display: 'flex',
+  borderRadius: '10px',
+  marginBottom: '20px',
+  justifyContent: 'space-between',
+  background: 'rgb(234, 239, 243)',
+  transition: 'transform 0.3s ease-in-out',
+  '&:hover': {
+    transform: 'scale(1.02)',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.1)',
+  },
+  '@media (max-width: 600px)': {
+    flexDirection: 'column',
+    alignItems: 'center',
+  }
+});
 
-export default function Admin_tender_card({ title, description, time, status,category }) {
-    const theme = useTheme();
-    // const navigate = useNavigate();
+const CardDetailsBox = styled(Box)({
+  width: '60%',
+  height: '100%',
+  '@media (max-width: 600px)': {
+    width: '100%',
+    textAlign: 'center',
+  }
+});
 
+const CardActionsBox = styled(Box)({
+  display: 'flex',
+  justifyContent: 'space-between',
+  marginRight: '8px',
+  alignItems: 'center',
+  width: '20%',
+  '@media (max-width: 600px)': {
+    width: '100%',
+    justifyContent: 'space-around',
+    marginTop: '10px',
+  }
+});
+
+export default function Admin_tender_card({ title, description, time, status, category }) {
     const [open, setOpen] = useState(false);
     const tenderId = '123'; // Replace with actual ID
-  
+
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-  
-    
-
 
     return (
-        <Card sx={{ display: 'flex', borderRadius: "10px", marginBottom: "20px", justifyContent: "space-between", height: "70px", background: "rgb(234, 239, 243)" }}>
+        <StyledCard>
             <CardMedia
                 component="img"
-                sx={{ width: 150, marginLeft: "0", borderRadius: "10px" }}
+                sx={{ width: 150, borderRadius: '10px 0 0 10px', height: '100%' }}
                 image="https://th.bing.com/th?id=ODL.236e670dc5db895549866c86c7d5f172&w=147&h=110&c=10&rs=1&qlt=99&o=6&dpr=1.5&pid=13.1"
-                alt="Live from space album cover"
+                alt="Tender image"
             />
-            <Box sx={{ width: "60%", height: "100%" }}>
-                <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "start", marginTop: "1px" }}>
-                    <Typography component="div" variant="h5" sx={{ marginTop: "-10px" }}>
+            <CardDetailsBox>
+                <CardContent sx={{ display: "flex", flexDirection: "column", alignItems: "start", justifyContent: "center" }}>
+                    <Typography component="div" variant="h5">
                         {title}
                     </Typography>
-                    <Typography variant="h6" color="text.secondary" component="div">
+                    <Typography variant="subtitle1" color="text.secondary" sx={{ mt: 1 }}>
                         {description}
                     </Typography>
-
                 </CardContent>
-            </Box>
-            <Box sx={{ display: 'flex', justifyContent: "space-between", marginRight: "8px", alignItems: "center", width: "20%"}}>
-                <Typography variant="subtitle2" color="text.secondary" component="div" >
+            </CardDetailsBox>
+            <CardActionsBox>
+                <Typography variant="subtitle2" color="text.secondary">
                     {time}
                 </Typography>
                 <Chip label={category} color="primary" />
-                <Chip label={status} color={status==="open"? "success":"error"} />
-                <Button variant="outlined" color="secondary" sx={{ background: "white" }}onClick={handleOpen}>View</Button>
+                <Chip label={status} color={status === "open" ? "success" : "error"} />
+                <Button variant="outlined" color="secondary" onClick={handleOpen}>View</Button>
                 <Admin_tender_view_btn open={open} handleClose={handleClose} tenderId={tenderId} />
-
-            </Box>
-
-        </Card>
+            </CardActionsBox>
+        </StyledCard>
     );
 }
