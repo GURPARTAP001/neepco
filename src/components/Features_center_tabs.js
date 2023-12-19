@@ -8,10 +8,14 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Tender_card from './Tender_card';
+import  { useState, useEffect } from 'react';
+import { Dialog, DialogTitle, DialogContent } from '@mui/material';
+// import axios from 'axios'; // Import axios for making HTTP requests
 
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+  
 
   return (
     <div
@@ -47,6 +51,49 @@ export default function Features_center_tabs() {
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
+  // state of the card
+  const [open, setOpen] = useState(false); // State for dialog visibility
+  const [selectedTender, setSelectedTender] = useState(null); // State for selected tender
+
+  // const [tenders, setTenders] = useState([]); // State for storing tenders list
+
+  const tenders = [
+    { id: 1, title: 'Road Construction', description: 'Construction of new roads in the city center.' },
+    { id: 2, title: 'School Renovation', description: 'Renovation of the old school buildings.' },
+    { id: 3, title: 'college Renovation', description: 'Renovation of the old school buildings.' },
+    { id: 4, title: 'Dam Renovation', description: 'Renovation of the old school buildings.' },
+    { id: 5, title: 'Canal Renovation', description: 'Renovation of the old school buildings.' },
+    { id: 6, title: 'Bus Renovation', description: 'Renovation of the old school buildings.' },
+    { id: 7, title: 'Steel Renovation', description: 'Renovation of the old school buildings.' },
+    { id: 8, title: 'Iron Renovation', description: 'Renovation of the old school buildings.' },
+    // ... add more static tenders if needed
+];
+
+// Fetch tenders from backend on component mount
+  //**** */ useEffect(() => {
+  //     const fetchTenders = async () => {
+  //         try {
+  //             const response = await axios.get('YOUR_BACKEND_API_URL'); // Replace with your API URL
+  //             setTenders(response.data); // Assuming response.data contains tenders
+  //         } catch (error) {
+  //             console.error('Error fetching tenders:', error);
+  //         }
+  //     };
+
+  //     fetchTenders();
+  // }, []);
+
+  // Open dialog with selected tender details
+  const handleView = (tender) => {
+    setSelectedTender(tender);
+    setOpen(true);
+};
+
+// Close the dialog
+const handleClose = () => {
+    setOpen(false);
+};
+
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -78,14 +125,25 @@ export default function Features_center_tabs() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}  >
-         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm" category="Goods"/>
-         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm" category="Services"/>
-         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm" category="Goods"/>
-         <Tender_card title="Tender-Name:hydro plant1" description="Tender-No.:dfghjkjhgfdfghj" time="dec 15,3:31pm" category="Services"/>
-         <Tender_card title="Tender-Name:hydro plant2" description="Tender-No.:hjhgfhgfdfghj" time="dec 15,3:31pm" category="Services"/>
-         <Tender_card title="Tender-Name:hydro plant3" description="Tender-No.:fdfghj" time="dec 15,3:31pm" category="Goods"/>
-        </TabPanel>
+        <TabPanel value={value} index={0} dir={theme.direction}>
+  <div>
+    {tenders.map((tender) => ( // Ensure you are mapping over the tenders array
+      <Tender_card
+        key={tender.id}
+        tender={tender}
+        onView={handleView} // Pass handleView correctly
+      />
+    ))}
+    <Dialog open={open} onClose={handleClose} maxWidth="md" fullWidth>
+      <DialogTitle>{selectedTender?.title}</DialogTitle>
+      <DialogContent>
+        <Typography variant="h6">Description</Typography>
+        <Typography paragraph>{selectedTender?.description}</Typography>
+        {/* You can add more details here, like tender ID, submission dates, etc. */}
+      </DialogContent>
+    </Dialog>
+  </div>
+</TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
           APPLIED TENDER
          

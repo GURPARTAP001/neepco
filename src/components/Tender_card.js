@@ -1,44 +1,48 @@
-import * as React from 'react';
-import { useTheme } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button } from '@mui/material';
-import Chip from '@mui/material/Chip';
+import React from 'react';
+import { Card, CardMedia, CardContent, CardActions, Button, Typography, Grid } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
-export default function Tender_card({ title, description,time,category }) {
-    const theme = useTheme();
 
-    return (
-        <Card sx={{ display: 'flex', borderRadius: "10px", marginBottom: "20px", justifyContent:"space-between",height:"70px",background:"rgb(221, 225, 229)" }}>
-            <CardMedia
-                component="img"
-                sx={{ width: 150 ,marginLeft:"0" ,borderRadius:"10px"}}
-                image="https://th.bing.com/th?id=ODL.236e670dc5db895549866c86c7d5f172&w=147&h=110&c=10&rs=1&qlt=99&o=6&dpr=1.5&pid=13.1"
-                alt="Live from space album cover"
-            />
-            <Box sx={{width:"60%",height:"100%" }}>
-                <CardContent sx={{ display:"flex" ,flexDirection:"column" ,alignItems:"start",marginTop:"1px"}}>
-                    <Typography component="div" variant="h5"sx={{marginTop:"-10px" }}>
-                        {title}
-                    </Typography>
-                    <Typography variant="h6" color="text.secondary" component="div">
-                        {description}
-                    </Typography>
-                    
-                </CardContent>
-            </Box>
-            <Box sx={{ display: 'flex',justifyContent:"space-between",marginRight:"8px",alignItems:"center",width:"24%" }}>
-            <Typography variant="subtitle2" color="text.secondary" component="div">
-                        {time}
-                    </Typography>
-                    <Chip label={category} color="primary" />
-                <Button variant="outlined" color="secondary" sx={{ background:"white"}}>View</Button>
-                <Button variant="contained" color="success">Bid</Button>
-            </Box>
+const TenderCard = ({ tender ,onView}) => {
 
-        </Card>
-    );
-}
+      const navigate = useNavigate(); // Hook for navigation
+    
+      const handleBid = () => {
+        // Pass the tender ID to the ProposalForm page if needed
+        navigate('/proposal-form', { state: { tenderId: tender.id } });
+      };
+    
+  return (
+    <Card sx={{ display: 'flex', alignItems: 'center', width: 1 }}>
+      <CardMedia
+        component="img"
+        sx={{ width: 151 }}
+        image="URL_TO_IMAGE" // Replace with your image URL
+        alt="Tender Image"
+      />
+      <CardContent sx={{ flex: '1 0 auto' }}>
+        <Typography variant="subtitle1">
+          Tender-Name:{tender.title}
+        </Typography>
+        <Typography variant="subtitle1">
+          Tender-No:{tender.number}
+        </Typography>
+        <Typography variant="subtitle2" color="text.secondary">
+          {tender.date}
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Grid container justifyContent="flex-end">
+          <Button size="small" color="primary" onClick={() => onView(tender)}>
+            View
+          </Button>
+          <Button size="small" variant="contained" color="secondary" onClick={handleBid}>
+            Send Proposal
+          </Button>
+        </Grid>
+      </CardActions>
+    </Card>
+  );
+};
+
+export default TenderCard;
