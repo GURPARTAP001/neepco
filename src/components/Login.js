@@ -205,11 +205,11 @@ function LoginPage() {
 
   const submitHandler = async () => {
     try {
-      const config = { headers: { 'Content-type': 'application/json' } };
+      /*const config = { headers: { 'Content-type': 'application/json' } };
       const { data } = await axios.post('http://localhost:4000/api/user/login', { email, password }, config);
       console.log(JSON.stringify(data));
-      localStorage.setItem('userInfo', JSON.stringify(data));
-      navigate('/Admin_dashboard');
+      localStorage.setItem('userInfo', JSON.stringify(data));*/
+      navigate(value === 'admin' ? '/Admin_dashboard' : '/');
     } catch (e) {
       console.error(e);
     }
@@ -278,7 +278,7 @@ function LoginPage() {
                 <Typography variant="body2" sx={{ mt: 2, textAlign: 'center', cursor: 'pointer', color: 'primary.main' }}
                   onClick={() => navigate('/SignUp')} // Replace with your route
                 >
-                  Already have an account? Click here
+                  Don't have an account? Click here
                 </Typography>
               </Box>
             </Paper>

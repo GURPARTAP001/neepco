@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import Features_center from './Features_center';
+import Nav_Bar from "./Nav_bar";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#f5f5f5',
@@ -18,6 +19,8 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Container() {
   return (
+    <>
+    <Nav_Bar/>
     <Box 
       sx={{
         display: 'flex',
@@ -40,6 +43,7 @@ export default function Container() {
         {/* You can add more <Grid> items here if needed */}
       </Grid>
     </Box>
+    </>
   );
 }
 

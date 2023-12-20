@@ -96,7 +96,7 @@ export default function Navbar() {
   const menuOptions = [
     { text: 'Vender Profile', onClick: () => {navigate('/Vender_profile')} },
     { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
-    { text: 'Sign Out', onClick: () => {/* Navigation logic here */} },
+    { text: 'Sign Out', onClick: () => {navigate('./Login')} },
     // ... other options
   ];
 
