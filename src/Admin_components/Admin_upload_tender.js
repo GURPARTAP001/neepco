@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, TextField, Button, Typography, Box, InputLabel, Input } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const Admin_upload_tender = () => {
+  const navigate = useNavigate();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [type, setType] = useState('');
@@ -20,13 +22,14 @@ const Admin_upload_tender = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/tenders', formData, {
+      /*const response = await axios.post('http://localhost:5000/api/tenders', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       console.log(response.data);
-      // Handle success (e.g., showing a success message)
+      // Handle success (e.g., showing a success message)*/
+      navigate('/Admin_dashboard')
     } catch (error) {
       console.error('Error during tender upload:', error);
       // Handle error (e.g., showing an error message)

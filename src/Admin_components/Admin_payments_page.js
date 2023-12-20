@@ -141,13 +141,13 @@ const Admin_payments_page = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const config = {
+      /*const config = {
         headers: {
           "Content-Type": "application/json",
           Authorization: `Bearer ${user.token}`,
         },
       };
-      await axios.post("http://your-backend-api/payment", paymentDetails, config);
+      await axios.post("http://your-backend-api/payment", paymentDetails, config);*/
       navigate("/Admin_dashboard");
     } catch (error) {
       console.log(error);

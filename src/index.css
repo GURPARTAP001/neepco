@@ -2,3 +2,131 @@
   margin: 0;
   padding: 0;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+.main-loginpage {
+  width: 100%;
+  font-family: "Arial", sans-se rif;
+  color: rgb(246, 242, 242);
+}
+.header-login {
+  background-color: #0055a4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  height: 7vh;
+}
+.body-header-login {
+  font-size: 1.5em;
+  margin-bottom: 2em;
+}
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+  /* Add more styling here */
+}
+
+.bodylogin {
+  margin-top: auto;
+  margin-left: 5.5rem;
+  margin-right: 5.5rem;
+  margin-bottom: 18px;
+  padding: 15px 10px;
+  color: #333;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  font-size: 0.9em;
+  margin-bottom: 0%;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.footer-list li:hover {
+  text-decoration: underline;
+}
+
+.footer-policies,
+.footer-certifications,
+.footer-stats {
+  margin-top: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  width: 100px; /* Adjust as needed */
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #318fc2;
+}
+@media (min-width: 768px) {
+  .bodylogin {
+    margin-left: 3rem;
+    margin-right: 3rem;
+  }
+
+  .footer-content {
+    flex-direction: row;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 767px) {
+  .header-login {
+    flex-direction: column;
+    text-align: center;
+  }
+  .login-button {
+    width: 100%; /* Full-width buttons on mobile */
+    padding: 10px; /* Larger padding for touch targets */
+  }
+  .bodylogin {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  .footer-logo img {
+    width: 80px; /* Smaller logo on mobile */
+  }
+}
