@@ -28,8 +28,8 @@ function App() {
 
       <Router>
         {/* <Login/> */}
-      {/* <Nav_Bar/> */}
-      <Admin_nav/>
+      <Nav_Bar/>
+      {/* <Admin_nav/> */}
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
       <Routes>
