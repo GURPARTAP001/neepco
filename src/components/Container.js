@@ -6,6 +6,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Unstable_Grid2';
 import Features_center from './Features_center';
 import Nav_Bar from "./Nav_bar";
+import Image_crosal from './Image_crosal';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#f5f5f5',
@@ -21,6 +22,8 @@ export default function Container() {
   return (
     <>
     <Nav_Bar/>
+    <Image_crosal/>
+    
     <Box 
       sx={{
         display: 'flex',

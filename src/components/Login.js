@@ -343,21 +343,11 @@ function LoginPage() {
   const submitHandler = async (e) => {
     e.preventDefault();
     try {
-      /*const config = { headers: { 'Content-type': 'application/json' } };
+      const config = { headers: { 'Content-type': 'application/json' } };
       const { data } = await axios.post('http://localhost:4000/api/user/login', { email, password }, config);
-<<<<<<< HEAD
-      localStorage.setItem('userInfo', JSON.stringify(data));
-      if (rememberMe) {
-        localStorage.setItem('rememberedCredentials', JSON.stringify({ email, password }));
-      } else {
-        localStorage.removeItem('rememberedCredentials');
-      }
-      navigate('/Admin_dashboard');
-=======
       console.log(JSON.stringify(data));
-      localStorage.setItem('userInfo', JSON.stringify(data));*/
+      localStorage.setItem('userInfo', JSON.stringify(data));
       navigate(value === 'admin' ? '/Admin_dashboard' : '/');
->>>>>>> 5ce24bb631f65ad9d9e23fab70876ed8f7867951
     } catch (e) {
       console.error(e);
     }

@@ -248,7 +248,7 @@ export default function Navbar() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h4" noWrap onClick={handleTypographyClick} sx={{ flexGrow: 1, cursor: "pointer" }}>
-            NEEPCO
+          <img src="https://neepco.co.in/sites/all/themes/neepco_new/img/logo.png" alt="symbol" />
           </Typography>
           {isMobile ? (
             <IconButton color="inherit" onClick={handleNotificationOpen}>
