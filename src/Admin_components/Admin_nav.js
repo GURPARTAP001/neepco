@@ -48,7 +48,7 @@ export default function Admin_nav() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flexGrow: 1 }} onClick={handle_Typography_click} sx={{cursor:"pointer"}} >
-            NEEPCO
+            <img src="ttps://neepco.co.in/sites/all/themes/neepco_new/img/logo.png" alt="symbol" />
           </Typography>
           <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
             <div style={{ position: 'absolute', left: "1%", top: '60%', transform: 'translateY(-50%)' }}>
