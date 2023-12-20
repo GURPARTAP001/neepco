@@ -22,7 +22,7 @@ export default function Admin_nav() {
   const menuOptions = [
     { text: 'Create New Tender', onClick: () => {navigate('/Upload_tenders')} },
     { text: 'Pending Payments', onClick: () => {navigate('/Pending_payments')} },
-    { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
+    { text: 'Analytics', onClick: () => {navigate('/analytics')} },
     { text: 'Sign Out', onClick: () => {navigate('../Login')} },
     // ... other options
   ];
