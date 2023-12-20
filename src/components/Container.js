@@ -24,9 +24,9 @@ export default function Container() {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        width:"95%" ,
+        width:"97.1%" ,
         padding: '20px',
-        backgroundColor: 'transparent',
+        backgroundColor: '#C8CCD9',
         overflow: 'hidden'
       }}
     >

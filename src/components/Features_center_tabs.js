@@ -75,6 +75,42 @@ export default function Features_center_tabs() {
       duration: '18 months',
       image: 'https://example.com/urban-park.jpg', // Replace with actual image URL
     },
+    {
+      id: '3',
+      title: 'Urban Park Development',
+      description: 'Development of a new urban park with modern amenities and green spaces.',
+      amount: '$5,500,000',
+      lastDate: '2023-09-10',
+      duration: '18 months',
+      image: 'https://example.com/urban-park.jpg', // Replace with actual image URL
+    },
+    {
+      id: '3',
+      title: 'Urban Park Development',
+      description: 'Development of a new urban park with modern amenities and green spaces.',
+      amount: '$5,500,000',
+      lastDate: '2023-09-10',
+      duration: '18 months',
+      image: 'https://example.com/urban-park.jpg', // Replace with actual image URL
+    },
+    {
+      id: '3',
+      title: 'Urban Park Development',
+      description: 'Development of a new urban park with modern amenities and green spaces.',
+      amount: '$5,500,000',
+      lastDate: '2023-09-10',
+      duration: '18 months',
+      image: 'https://example.com/urban-park.jpg', // Replace with actual image URL
+    },
+    {
+      id: '3',
+      title: 'Urban Park Development',
+      description: 'Development of a new urban park with modern amenities and green spaces.',
+      amount: '$5,500,000',
+      lastDate: '2023-09-10',
+      duration: '18 months',
+      image: 'https://example.com/urban-park.jpg', // Replace with actual image URL
+    },
     // Add more tenders as needed
   ];
 

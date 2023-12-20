@@ -115,8 +115,8 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="static">
-        <Toolbar>
+      <AppBar position="static" sx={{background:"#C8CCD9",borderBottom:"1px solid black"}}>
+        <Toolbar sx={{borderBottom:"1px solid black" ,color:"black"}}>
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
@@ -132,12 +132,12 @@ export default function Navbar() {
           ) : (
             <>
               <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
-                <div style={{ position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)' }}>
+                <div style={{ position: 'absolute', left: "1%", top: '60%', transform: 'translateY(-50%)' }}>
                   <SearchIcon />
                 </div>
                 <InputBase
                   placeholder="Search…"
-                  style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})` }}
+                  style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})` ,border:"1px solid black",borderRadius:"10px"}}
                   inputProps={{ 'aria-label': 'search' }}
                 />
               </div>
@@ -150,7 +150,7 @@ export default function Navbar() {
           )}
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)} >
         {drawerList}
       </Drawer>
     </>
