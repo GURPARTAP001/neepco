@@ -27,13 +27,14 @@ export default function Container() {
         width:"97.1%" ,
         padding: '20px',
         backgroundColor: '#C8CCD9',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        minHeight:"100vh",
       }}
     >
       <Grid container spacing={2} justifyContent="center">
         <Grid item>
           <Item>
-            <Features_center/>
+            <Features_center />
           </Item>
         </Grid>
         {/* You can add more <Grid> items here if needed */}

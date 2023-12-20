@@ -4,7 +4,7 @@ import Features_center_tabs from './Features_center_tabs'
 
 function Features_center() {
   return (
-    <div >
+    <div  >
       <Features_center_tabs/>
     </div>
   )
