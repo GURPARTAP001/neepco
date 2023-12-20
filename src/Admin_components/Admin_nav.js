@@ -48,9 +48,9 @@ export default function Admin_nav() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap style={{ flexGrow: 1 }} onClick={handle_Typography_click} sx={{cursor:"pointer"}} >
-            <img src="ttps://neepco.co.in/sites/all/themes/neepco_new/img/logo.png" alt="symbol" />
+          <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/74/North_Eastern_Electric_Power_Corporation_Logo.svg/1200px-North_Eastern_Electric_Power_Corporation_Logo.svg.png" alt="symbol" style={{width:"60px",height:"45px",marginBottom:"-10px",marginLeft:"50px", backgroundColor:"#C8CCD9"}} />
           </Typography>
-          <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
+          {/* <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
             <div style={{ position: 'absolute', left: "1%", top: '60%', transform: 'translateY(-50%)' }}>
               <SearchIcon />
             </div>
@@ -59,9 +59,9 @@ export default function Admin_nav() {
               style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})`,border:"1px solid black",borderRadius:"10px" ,}}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
+          </div> */}
           <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
+            <Badge  color="secondary">
               <NotificationsIcon />
             </Badge>
           </IconButton>
