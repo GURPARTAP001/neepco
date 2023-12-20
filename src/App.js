@@ -28,8 +28,13 @@ function App() {
 
       <Router>
         {/* <Login/> */}
+<<<<<<< HEAD
         
       
+=======
+      <Nav_Bar/>
+      {/* <Admin_nav/> */}
+>>>>>>> 8d901d8dff07b46edbdf43b446c4e3c598c35c1c
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
       <Routes>
