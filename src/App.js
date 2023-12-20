@@ -14,10 +14,24 @@ import SignIn from './components/SignIn';
 import Admin_nav from './Admin_components/Admin_nav';
 import Admin_upload_tender from './Admin_components/Admin_upload_tender';
 import Admin_tender_view_btn from './Admin_components/Admin_tender_view_btn';
+import PieChart from './components/PieChart';
+import BarChart from './components/BarChart';
+import BarChartTenderPayment from './components/BarChartTenderPayment';
+import PieChartTenderType from './components/PieChartTenderType';
+import BarChartTenderCategory from './components/BarChartTenderCategory';
+import Analytics from './components/Analytics';
 
 
 
 function App() {
+
+
+  
+
+
+
+
+
   return (
     <div className="App">
       
@@ -28,17 +42,19 @@ function App() {
 
       <Router>
         {/* <Login/> */}
-<<<<<<< HEAD
         
       
-=======
-      <Nav_Bar/>
-      {/* <Admin_nav/> */}
->>>>>>> 8d901d8dff07b46edbdf43b446c4e3c598c35c1c
       {/* <Admin_dashboard/> */}
       {/* <Profile/> */}
       <Routes>
         <Route path="/" element={<Container/> } />
+        
+        
+        
+        <Route path="/analytics" element={<Analytics />} />
+     
+
+
         <Route path="/Admin_dashboard" element={<Admin_dashboard/> } />
         <Route path="/proposal-form" element={ <Send_proposal_page/>} />
         <Route path="Pending_payments" element={ <Pending_payments/>} />

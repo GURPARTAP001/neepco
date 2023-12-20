@@ -220,15 +220,9 @@ export default function Navbar() {
   };
 
   const menuOptions = [
-<<<<<<< HEAD
     { text: 'Vender Profile', onClick: () => {navigate('/Vender_profile')} },
     { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
     { text: 'Sign Out', onClick: () => {navigate('./Login')} },
-=======
-    { text: 'Vender Profile', onClick: () => navigate('/Vender_profile') },
-    { text: 'Analytics', onClick: () => {/* Navigation logic here */ } },
-    { text: 'Sign Out', onClick: () => {/* Navigation logic here */ } },
->>>>>>> 8d901d8dff07b46edbdf43b446c4e3c598c35c1c
     // ... other options
   ];
 
