@@ -113,15 +113,17 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Container, TextField, Button, Typography, Box, InputLabel, Input, useTheme, useMediaQuery } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const navigate = useNavigate();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [picture, setPicture] = useState(null);
+  const [picture, setPicture] = useState('');
 
   const handleSignUp = async (event) => {
     event.preventDefault();
@@ -134,13 +136,14 @@ const SignUp = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', formData, {
+      /*const response = await axios.post('http://localhost:5000/api/signup', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
       console.log(response.data);
-      // Handle response here
+      // Handle response here*/
+      navigate('/');
     } catch (error) {
       console.error('Error during sign up:', error);
       // Handle error here
@@ -199,14 +202,19 @@ const SignUp = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <InputLabel htmlFor="picture">Upload Picture</InputLabel>
-          <Input
-            id="picture"
-            name="picture"
-            type="file"
+          {/*<InputLabel htmlFor="picture">Upload Picture</InputLabel>
+          <TextField
+            margin="normal"
+            required
             fullWidth
-            onChange={handlePictureChange}
-          />
+            name="picture"
+            label="picture"
+            type="picture"
+            id="picture"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+      />*/}
           <Button
             type="submit"
             fullWidth

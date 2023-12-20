@@ -23,7 +23,7 @@ export default function Admin_nav() {
     { text: 'Create New Tender', onClick: () => {navigate('/Upload_tenders')} },
     { text: 'Pending Payments', onClick: () => {navigate('/Pending_payments')} },
     { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
-    { text: 'Sign Out', onClick: () => {/* Navigation logic here */} },
+    { text: 'Sign Out', onClick: () => {navigate('../Login')} },
     // ... other options
   ];
 

@@ -21,7 +21,7 @@ const sampleTender = {
   amount: "$5,000,000",
   lastDate: "2023-12-31",
   duration: "24 months",
-  image: "https://th.bing.com/th/id/OIP.YAXlTjvtEKchdMVc5laZhwHaE8?rs=1&pid=ImgDetMain" // Replace with an actual image URL
+  image: "https://via.placeholder.com/400" // Replace with an actual image URL
 };
 
 const Admin_tender_view_btn = ({ open, handleClose, tenderId }) => {
