@@ -6,7 +6,7 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [picture, setPicture] = useState(null);
+  const [picture, setPicture] = useState('');
 
   const handleSignUp = async (event) => {
     event.preventDefault();
@@ -85,14 +85,19 @@ const SignUp = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <InputLabel htmlFor="picture">Upload Picture</InputLabel>
-          <Input
-            id="picture"
-            name="picture"
-            type="file"
+          {/*<InputLabel htmlFor="picture">Upload Picture</InputLabel>
+          <TextField
+            margin="normal"
+            required
             fullWidth
-            onChange={handlePictureChange}
-          />
+            name="picture"
+            label="picture"
+            type="picture"
+            id="picture"
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+      />*/}
           <Button
             type="submit"
             fullWidth
