@@ -258,14 +258,14 @@ export default function Navbar() {
             </IconButton>
           ) : (
             <>
-              <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
+              {/* <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
                 <SearchIcon style={{ position: 'absolute', left: "1%", top: '50%', transform: 'translateY(-50%)' }} />
                 <InputBase
                   placeholder="Search…"
                   style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})`, border: "1px solid black", borderRadius: "10px" }}
                   inputProps={{ 'aria-label': 'search' }}
                 />
-              </div>
+              </div> */}
               <IconButton color="inherit" onClick={handleNotificationOpen}>
                 <Badge badgeContent={4} color="secondary">
                   <NotificationsIcon />

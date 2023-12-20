@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Dialog, DialogTitle, DialogContent, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Button, Dialog, DialogTitle, DialogContent, Typography, useMediaQuery, useTheme, Alert } from '@mui/material';
 
 const Notification = () => {
     const [open, setOpen] = useState(false);
@@ -36,7 +36,9 @@ const Notification = () => {
           <DialogTitle>Notification</DialogTitle>
           <DialogContent>
             <Typography variant="body1">
-              This is a notification message. You can put any content here, like text, images, or other elements.
+            <Alert severity="info">Tender NO:3443 Is Allocated To You</Alert>
+            <Alert severity="info">Tender NO:3443 Is Allocated To You</Alert>
+            <Alert severity="info">Tender NO:3443 Is Allocated To You</Alert>
             </Typography>
           </DialogContent>
         </Dialog>
