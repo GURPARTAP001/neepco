@@ -87,10 +87,10 @@ export default function Admin_tender_container() {
           <Tab label="Tenders" />
         </StyledTabs>
       </Box>
-      <StyledDropdownArea>
+      {/* <StyledDropdownArea>
         <Drop_down label="Year" data={data1} />
         <Drop_down label="Status" data={data2} />
-      </StyledDropdownArea>
+      </StyledDropdownArea> */}
 
       <StyledTendersArea>
         {tenders.map((tender, index) => (

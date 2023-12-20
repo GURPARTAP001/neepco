@@ -15,10 +15,10 @@
 //     const navigate = useNavigate();
 //     const [value, setValue] = useState("admin");
 //     const { user, setUser } = ChatState();
-//  /* const [loginDetails, setLoginDetails] = useState({
+//   const [loginDetails, setLoginDetails] = useState({
 //     username: "",
 //     password: "",
-//   });*/
+//   });
 
 //   const handleTabChange = (newValue) => {
 //     setValue(newValue);
@@ -26,16 +26,16 @@
 
 //   console.log(value);
 
-//   /*const handleInputChange = (event) => {
+//   const handleInputChange = (event) => {
 //     const { name, value } = event.target;
 //     setLoginDetails({ ...loginDetails, [name]: value });
-//   };*/
+//   };
 
 //   const handleLogin = (event) => {
 //     event.preventDefault();
 //     console.log("Login button clicked for:", value);
-//     //console.log("Login details:", loginDetails);
-//     // Your login logic here
+//     console.log("Login details:", loginDetails);
+//     Your login logic here
 //   }
 
 //   const [email, setEmail] = useState();
@@ -111,28 +111,28 @@
 //                 Sign In as {value.charAt(0).toUpperCase() + value.slice(1)}
 //               </Typography>
 //               <Box component="form" onSubmit={handleLogin} noValidate>
-                // <TextField
-                //   margin="normal"
-                //   required
-                //   fullWidth
-                //   id="username"
-                //   label="Username"
-                //   name="username"
-                //   autoComplete="username"
-                //   autoFocus
-                //   onChange={(e) => setEmail(e.target.value)}
-                // />
-                // <TextField
-                //   margin="normal"
-                //   required
-                //   fullWidth
-                //   name="password"
-                //   label="Password"
-                //   type="password"
-                //   id="password"
-                //   autoComplete="current-password"
-                //   onChange={(e) => setPassword(e.target.value)}
-                // />
+//                 <TextField
+//                   margin="normal"
+//                   required
+//                   fullWidth
+//                   id="username"
+//                   label="Username"
+//                   name="username"
+//                   autoComplete="username"
+//                   autoFocus
+//                   onChange={(e) => setEmail(e.target.value)}
+//                 />
+//                 <TextField
+//                   margin="normal"
+//                   required
+//                   fullWidth
+//                   name="password"
+//                   label="Password"
+//                   type="password"
+//                   id="password"
+//                   autoComplete="current-password"
+//                   onChange={(e) => setPassword(e.target.value)}
+//                 />
 //                 <Button
 //                   type="submit"
 //                   fullWidth
@@ -151,24 +151,24 @@
 //             </Paper>
 //           </Grid>
 //           <Grid item xs={12} md={6}>
-            // <Typography variant="body1" sx={{ mt: 3 }}>
-            //   Since 1976, NEEPCO has been a cornerstone in power generation in
-            //   India's North Eastern region. As a proud Schedule A- Miniratna
-            //   Category-I CPSE under the Ministry of Power, Government of India,
-            //   we specialize in:
-            //   <br />
-            //   <br />
-            //   <br />
-            //   Operating the largest hydroelectric power plant in the North East.
-            //   <br />
-            //   <br />
-            //   Unique distinction of running both hydro and thermal power
-            //   stations.
-            //   <br />
-            //   <br />
-            //   Expertise in constructing and operating hydro projects in the
-            //   challenging terrain of the North East.
-            // </Typography>
+//             <Typography variant="body1" sx={{ mt: 3 }}>
+//               Since 1976, NEEPCO has been a cornerstone in power generation in
+//               India's North Eastern region. As a proud Schedule A- Miniratna
+//               Category-I CPSE under the Ministry of Power, Government of India,
+//               we specialize in:
+//               <br />
+//               <br />
+//               <br />
+//               Operating the largest hydroelectric power plant in the North East.
+//               <br />
+//               <br />
+//               Unique distinction of running both hydro and thermal power
+//               stations.
+//               <br />
+//               <br />
+//               Expertise in constructing and operating hydro projects in the
+//               challenging terrain of the North East.
+//             </Typography>
 //           </Grid>
 //         </Grid>
 //       </div>
@@ -220,30 +220,30 @@
 //       <div style={{ padding: isMobile ? '2rem' : '5rem', margin: isMobile ? '20px 30px' : '40px 60px' }}>
 //         <Box sx={{ width: '100%' }}></Box>
 
-        // <Box sx={{ width: '100%', marginBottom: 3 }}>
-        //   <div style={{ display: 'flex', justifyContent: 'center' }}>
-        //     <Button
-        //       variant={value === 'admin' ? 'contained' : 'outlined'}
-        //       onClick={() => handleTabChange('admin')}
-        //       style={{ marginRight: '16px' }}
-        //     >
-        //       Admin
-        //     </Button>
-        //     <Button
-        //       variant={value === 'vendor' ? 'contained' : 'outlined'}
-        //       onClick={() => handleTabChange('vendor')}
-        //     >
-        //       Vendor
-        //     </Button>
-        //   </div>
-        // </Box>
+//         <Box sx={{ width: '100%', marginBottom: 3 }}>
+//           <div style={{ display: 'flex', justifyContent: 'center' }}>
+//             <Button
+//               variant={value === 'admin' ? 'contained' : 'outlined'}
+//               onClick={() => handleTabChange('admin')}
+//               style={{ marginRight: '16px' }}
+//             >
+//               Admin
+//             </Button>
+//             <Button
+//               variant={value === 'vendor' ? 'contained' : 'outlined'}
+//               onClick={() => handleTabChange('vendor')}
+//             >
+//               Vendor
+//             </Button>
+//           </div>
+//         </Box>
 
-        // <Grid container spacing={isMobile ? 2 : 3}>
-        //   <Grid item xs={12} md={6}>
-        //     <Paper elevation={6} sx={{ p: 3 }}>
-        //       <Typography component="h2" variant="h5" sx={{ mb: 2 }}>
-        //         Sign In as {value.charAt(0).toUpperCase() + value.slice(1)}
-        //       </Typography>
+//         <Grid container spacing={isMobile ? 2 : 3}>
+//           <Grid item xs={12} md={6}>
+//             <Paper elevation={6} sx={{ p: 3 }}>
+//               <Typography component="h2" variant="h5" sx={{ mb: 2 }}>
+//                 Sign In as {value.charAt(0).toUpperCase() + value.slice(1)}
+//               </Typography>
 //               <Box component="form" onSubmit={submitHandler} noValidate>
 //               <TextField
 //                   margin="normal"
