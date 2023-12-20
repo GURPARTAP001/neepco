@@ -191,7 +191,7 @@
 
 
 import React, { useState } from 'react';
-import { AppBar, Toolbar, IconButton, Typography, InputBase, Badge, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme, Dialog, DialogTitle, DialogContent, Alert } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Typography, InputBase, Badge, Drawer, List, ListItem, ListItemText, useMediaQuery, useTheme, Dialog, DialogTitle, DialogContent } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
@@ -242,12 +242,12 @@ export default function Navbar() {
 
   return (
     <>
-      <AppBar position="static" sx={{ background: "#C8CCD9", borderBottom: "1px solid black" }}>
-        <Toolbar sx={{ borderBottom: "1px solid black", color: "black" }}>
+      <AppBar position="static" sx={{ background: "#C8CCD9", borderBottom: "1px solid black" ,color:"black"}}>
+        <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu" onClick={toggleDrawer(true)}>
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" noWrap style={{ flexGrow: 1 }} onClick={handleTypographyClick} sx={{ cursor: "pointer" }}>
+          <Typography variant="h4" noWrap onClick={handleTypographyClick} sx={{ flexGrow: 1, cursor: "pointer" }}>
             NEEPCO
           </Typography>
           {isMobile ? (
@@ -259,9 +259,7 @@ export default function Navbar() {
           ) : (
             <>
               <div style={{ position: 'relative', marginRight: theme.spacing(2) }}>
-                <div style={{ position: 'absolute', left: "1%", top: '60%', transform: 'translateY(-50%)' }}>
-                  <SearchIcon />
-                </div>
+                <SearchIcon style={{ position: 'absolute', left: "1%", top: '50%', transform: 'translateY(-50%)' }} />
                 <InputBase
                   placeholder="Search…"
                   style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})`, border: "1px solid black", borderRadius: "10px" }}
@@ -281,17 +279,11 @@ export default function Navbar() {
         {drawerList}
       </Drawer>
 
-      <Dialog open={notificationOpen} onClose={handleNotificationClose} >
-        <DialogTitle >NEW NOTIFICATION'S :-</DialogTitle>
+      <Dialog open={notificationOpen} onClose={handleNotificationClose}>
+        <DialogTitle>New Notification</DialogTitle>
         <DialogContent>
-          <Typography variant="body1" sx={{marginBottom:"8px"}}>
-          <Alert severity="info">Tender No.:343 Has Been Alloted To You</Alert>
-          </Typography>
-          <Typography variant="body1" sx={{marginBottom:"8px"}}>
-          <Alert severity="info">Tender No.:74343 Has Been Alloted To You</Alert>
-          </Typography>
-          <Typography variant="body1" sx={{marginBottom:"8px"}}>
-          <Alert severity="info">Tender No.:784343 Has Been Alloted To You</Alert>
+          <Typography variant="body1">
+            This is a notification message. You can customize it as needed.
           </Typography>
         </DialogContent>
       </Dialog>
