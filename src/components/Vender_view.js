@@ -38,7 +38,7 @@ const Vender_view = ({ open, handleClose, tenderId }) => {
   }, [open, tenderId]);
 
   return (
-    <Modal open={open} onClose={handleClose}>
+    <Modal open={open} onClose={handleClose} >
       <Box sx={style}>
         <Typography variant="h5" component="h2" gutterBottom>
           {tender.title}

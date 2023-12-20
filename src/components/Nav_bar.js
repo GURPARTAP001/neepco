@@ -96,6 +96,7 @@ export default function Navbar() {
   const menuOptions = [
     { text: 'Vender Profile', onClick: () => {navigate('/Vender_profile')} },
     { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
+    { text: 'Sign Out', onClick: () => {/* Navigation logic here */} },
     // ... other options
   ];
 
@@ -150,7 +151,7 @@ export default function Navbar() {
           )}
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)} >
+      <Drawer anchor="left" open={isDrawerOpen}  onClose={toggleDrawer(false)} >
         {drawerList}
       </Drawer>
     </>

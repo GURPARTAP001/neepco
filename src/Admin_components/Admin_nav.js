@@ -23,6 +23,7 @@ export default function Admin_nav() {
     { text: 'Create New Tender', onClick: () => {navigate('/Upload_tenders')} },
     { text: 'Pending Payments', onClick: () => {navigate('/Pending_payments')} },
     { text: 'Analytics', onClick: () => {/* Navigation logic here */} },
+    { text: 'Sign Out', onClick: () => {/* Navigation logic here */} },
     // ... other options
   ];
 
@@ -55,7 +56,7 @@ export default function Admin_nav() {
             </div>
             <InputBase
               placeholder="Search…"
-              style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})`,border:"1px solid black",borderRadius:"10px" }}
+              style={{ paddingLeft: `calc(1em + ${theme.spacing(4)})`,border:"1px solid black",borderRadius:"10px" ,}}
               inputProps={{ 'aria-label': 'search' }}
             />
           </div>
@@ -66,7 +67,7 @@ export default function Admin_nav() {
           </IconButton>
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}  >
         {drawerList}
       </Drawer>
     </>
